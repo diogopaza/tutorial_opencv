@@ -43,7 +43,20 @@ cv2.imshow('Imagem Fatiada', imagem)
 cv2.imwrite('imagemFatiada', fatia)
 
 <h6>Exercícios</h6>
-<p>1-Espelhamento da imagem, invertendo os pixles da esquerda para a parte da direita e vice-versa</p>
+<p>1-Rotacioanndo a 270 graus imagem</p>
+
+import numpy as np
+import cv2
+
+imagem = cv2.imread('lampada.png')
+
+altura, largura = imagem.shape[:2]
+print(altura)
+print(largura)
+ponto = (largura /2, altura/2)
+rotacao = cv2.getRotationMatrix2D(ponto, 270, 1.0  )
+rotacionando = cv2.warpAffine( imagem, rotacao, (largura, altura))
+cv2.imshow('Imagem Rotacionada ', rotacionando)
 
 
 
