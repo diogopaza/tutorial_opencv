@@ -33,5 +33,18 @@ print("Cor do pixel em (0,0) - Vermelho: %d Verde: %d Azul: %d" %(r, g ,b))
 
 imagem[ 10:50, 10:200] = ( 0, 0, 255)
 cv2.imshow('modificada', imagem)
+<h4>Recortar um pedaço da imagem</h4>
+
+fatia = imagem[0:150, 150:300]
+cv2.imshow('Imagem Fatiada', imagem)
+
+<p>Para salvar a imagem usa-se o método inwrite()</p>
+
+cv2.imwrite('imagemFatiada', fatia)
+
+<h6>Exercícios</h6>
+<p>1-Espelhamento da imagem, invertendo os pixles da esquerda para a parte da direita e vice-versa</p>
+
+
 
 
