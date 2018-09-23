@@ -45,7 +45,7 @@ cv2.imwrite('imagemFatiada', fatia)
 <h6>Exercícios</h6>
 <p>1-Rotacioanndo a 270 graus imagem</p>
 
-import numpy as np
+
 import cv2
 
 imagem = cv2.imread('lampada.png')
@@ -58,6 +58,10 @@ rotacao = cv2.getRotationMatrix2D(ponto, 270, 1.0  )
 rotacionando = cv2.warpAffine( imagem, rotacao, (largura, altura))
 cv2.imshow('Imagem Rotacionada ', rotacionando)
 
-
+<h6>Inverter a imagem</h6>
+<p>O método flip() inverte a imagem, passando como primeiro parâmetro o nome do arquivo e os egundo caso seja 1 inverte a imagem na vertical, enquanto -1 faz com que a inversão seja na horizontal.</p>
+imagem = cv2.imread('lampada.jpg')
+inverter = cv2.flip(imagem, -1)
+cv2.imshow('minha_imagem2', inverter)
 
 
